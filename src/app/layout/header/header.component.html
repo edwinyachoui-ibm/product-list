@@ -1,0 +1,17 @@
+<mat-toolbar color="basic">
+  <div>
+    <button *ngIf="isMobile$ | async" mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div class="header-wrapper">
+    <a routerLink="/home">Coffee Guru</a>
+    <span class="header-spacer"></span>
+
+    <div>
+      <a routerLink="/coffee/list">Coffee List</a>
+    </div>
+    <span class="header-spacer"></span>
+      <mat-icon color="warn" class="material-icons-outlined">coffee</mat-icon>
+  </div>
+</mat-toolbar>

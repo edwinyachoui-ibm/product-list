@@ -1,0 +1,14 @@
+<div>
+<header (sidenavToggle)="sidenav.toggle()"></header>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <side-nav (sidenavClose)="sidenav.close()"></side-nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<footer></footer>
+</div>
