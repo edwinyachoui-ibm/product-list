@@ -10,6 +10,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 
@@ -29,6 +31,8 @@ import { MatTableModule } from '@angular/material/table';
     MatPaginatorModule,
     MatTableModule,
     MatSortModule,
+    MatCardModule,
+    MatButtonModule,
     A11yModule
   ]
 })

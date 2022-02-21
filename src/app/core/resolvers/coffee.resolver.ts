@@ -1,5 +1,5 @@
-import { map } from 'rxjs';
-import { select, Store } from '@ngrx/store';
+import { first, map } from 'rxjs';
+import { Store } from '@ngrx/store';
 import { Injectable } from '@angular/core';
 import {
   Router, Resolve,
@@ -20,7 +20,7 @@ export class CoffeeResolver implements Resolve<boolean> {
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
     this.store.dispatch(coffeeActions.loadCoffees());
     return this.store.select(coffeeSeletors.selectAllCoffee).pipe(
-      filter(data => !!data), map(payload => true)
+      filter(data => !!data), first(), map(payload => true)
     )
   }
 }

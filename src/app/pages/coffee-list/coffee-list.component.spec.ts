@@ -1,14 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestModule } from 'src/app/shared/Test/test.module';
 
 import { CoffeeListComponent } from './coffee-list.component';
 
-describe('CoffeeListComponent', () => {
+fdescribe('CoffeeListComponent', () => {
   let component: CoffeeListComponent;
   let fixture: ComponentFixture<CoffeeListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CoffeeListComponent ]
+      declarations: [ CoffeeListComponent ],
+      imports: [TestModule]
     })
     .compileComponents();
   });

@@ -37,14 +37,15 @@
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns" (click)="getCoffeeDetail(row.uid)"></tr>
   </table>
 
   <mat-paginator
     class="mat-paginator-sticky"
-    [pageSizeOptions]="[5, 10, 20]"
+    [pageSizeOptions]="[5, 10]"
     showFirstLastButtons
     aria-label="Select page of periodic elements"
+    color="warn"
   >
   </mat-paginator>
 </div>

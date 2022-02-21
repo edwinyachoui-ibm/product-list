@@ -4,3 +4,4 @@ node_modules
 #misc
 .angular/cache/
 .sass-cache
+coverage
